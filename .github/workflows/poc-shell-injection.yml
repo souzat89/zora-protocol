@@ -1,0 +1,17 @@
+name: Shell Injection PoC
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_folder:
+        description: "Folder path"
+        required: true
+        default: "safe-folder"
+
+jobs:
+  poc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulated vulnerable step
+        run: |
+          cd ${{ inputs.package_folder }} && echo "executed"
