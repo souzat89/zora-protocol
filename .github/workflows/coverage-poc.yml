@@ -1,0 +1,25 @@
+name: Coverage PoC Wrapper
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_folder:
+        description: "Pacote alvo"
+        required: true
+        default: "."
+      coverage_args:
+        description: "Args adicionais"
+        required: false
+        default: ""
+      files_to_ignore:
+        description: "Arquivos para ignorar"
+        required: false
+        default: ""
+
+jobs:
+  call-coverage:
+    uses: ./.github/workflows/coverage.yml
+    with:
+      package_folder: ${{ inputs.package_folder }}
+      coverage_args: ${{ inputs.coverage_args }}
+      files_to_ignore: ${{ inputs.files_to_ignore }}
