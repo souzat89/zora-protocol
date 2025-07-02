@@ -1,5 +1,23 @@
 # @zoralabs/coins-sdk
 
+## 0.2.7
+
+### Patch Changes
+
+- bd371420: Small trade types fixes
+
+## 0.2.6
+
+### Patch Changes
+
+- 86a3d4f3: Add tradeCoin function to trade creator and content coins
+
+## 0.2.5
+
+### Patch Changes
+
+- 4153eddc: Added metadata uploading feature
+
 ## 0.2.4
 
 ### Patch Changes
